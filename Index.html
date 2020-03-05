@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Adriabic</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script type="text/javascript" src="scripts/lib/vue.js"></script>
+	<script type="text/javascript" src="dist/app-build.js"></script>
+</head>
+<body>
+    <main id="app">
+        <p>YOUR CHARACTER</p>
+        <p>{{c.appearence.gender}}</p>
+        <p>{{c.appearence.hair}}</p>
+        <p>{{c.appearence.beard}}</p>
+        <p>{{c.appearence.moustache}}</p>
+        <p>{{c.appearence.hat}}</p>
+        <p>{{c.appearence.glasses}}</p>
+        <p>{{c.appearence.scar}}</p>
+    </main>
+</body>
+
+<script>
+
+    var vm = new Vue( {
+        el: "#app",
+        data: {
+            c: charactersEngine.Create(1, 'PINO', 'SCOTTO')
+        },
+        computed: {
+
+        },
+        methods: {
+            
+        }
+    });
+
+</script>
+
+</html>

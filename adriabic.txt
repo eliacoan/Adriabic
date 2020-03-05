@@ -1,0 +1,66 @@
+Città
+	
+	Doruk
+		Marina		x Riparazione
+					x Missioni
+		Mercato		x Kit
+		Bordello	x Relax
+		
+	Ostaber
+		Marina		x Riparazione
+					x Missioni
+	
+	Gratia
+		Marina		x Riparazione
+					x Missioni
+		Bordello	x Relax
+		Polizia		x Multe
+		Ospedale	x Salute
+	
+	Kokrol
+		Marina		x Riparazione
+					x Missioni
+		Mercato		x Kit
+	
+	Publaziv
+		Marina		x Riparazione
+					x Missioni
+		Mercato nero x Armi (?)
+					 x Permessi
+	
+	Lenfor
+		Marina		x Riparazione
+					x Missioni
+	
+	Fonais
+		Marina		x Riparazione
+					x Missioni
+		Bordello	x Relax
+
+Attività
+	Cargo	Trasporto merci
+			Accessibile da subito (3 unità)
+			Upgradabile con KIT CARGO (3 unità, totale 6)
+			Upgradabile con KIT CARGO PLUS (4 unità, totale 10)
+	Turismo	Trasporto persone
+			Accessibile solo con KIT TURISMO (3 unità, totale 3)
+			Upgradabile con KIT TURISMO COMFORT (5 unità, totale 8)
+			
+Eventi
+	All'ingresso in Marina ci sarà la possibilità che avvenga un incontro con un determinato personaggio che ci proporrà una "missione"
+	L'accettazione della missione setterà un target (personaggio: destinatario della missione, oggetto: può essere fornito da personaggio o acquistato al mercato nero)
+	
+Personaggi
+	Ad inizio partita ci sarà la generazione del mondo di gioco
+	Verrà generato un personaggio unico per ogni luogo per ogni città. Il nome sarà fisso per ruolo e città (es: il mercante di Doruk si chiamerà sempre Jon Yulio)
+	Il meccanismo di generazione andrà a prendere l'ultimo generato e aggiungerà uno all'indice di quanto già presente tra gli attributi disponibili
+	Se ho capelli (alti), baffi (folti) e barba (rada) prendo uno random tra questi e aggiungo uno (se capelli > senza, se baffi > radi, se barba > senza)
+	Se superato il valore massimo per l'attributo aggiungo un attributo tra quelli non settati con il valore iniziale
+	
+	Capelli		(corti, lunghi, frate, cresta, alti, senza)
+	Baffi 		(folti, radi, senza)
+	Barba 		(folta, basette, rada, senza)
+	Cappello	(baseball, senza)
+	Occhiali	(vista, sole, senza)
+	Cicatrice	(sopracciglio, guancia)
+		
