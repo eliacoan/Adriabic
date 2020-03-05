@@ -1,8 +1,9 @@
 "use strict";
 class Appearence {
     // Constructor
-    constructor(gender = -1, hair = -1, moustache = -1, beard = -1, hat = -1, glasses = -1, scar = -1) {
+    constructor(gender = -1, eyes = -1, hair = -1, moustache = -1, beard = -1, hat = -1, glasses = -1, scar = -1) {
         this.gender = gender;
+        this.eyes = eyes;
         this.hair = hair;
         this.moustache = moustache;
         this.beard = beard;
@@ -34,9 +35,16 @@ class Appearence {
     }
     random() {
         this.gender = Utils.rnd(genders.length);
+        this.eyes = Utils.rnd(eyes.length);
         this.hair = Utils.rnd(hairs.length);
-        this.moustache = Utils.rnd(moustaches.length);
-        this.beard = Utils.rnd(beards.length);
+        if (this.gender === 0) {
+            this.moustache = Utils.rnd(moustaches.length);
+            this.beard = Utils.rnd(beards.length);
+        }
+        else {
+            this.moustache = moustaches.length - 1;
+            this.beard = beards.length - 1;
+        }
         this.hat = Utils.rnd(hats.length);
         this.glasses = Utils.rnd(glasses.length);
         this.scar = Utils.rnd(scars.length);
@@ -72,6 +80,7 @@ class Utils {
     }
 }
 let genders = ['Male', 'Female'];
+let eyes = ['Little', 'Tired', 'Vicious'];
 let hairs = ['Short', 'Long', 'Friar', 'Punk', 'High', 'No'];
 let moustaches = ['Big', 'Tiny', 'No'];
 let beards = ['Big', 'Sideburns', 'Tiny', 'No'];

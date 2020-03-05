@@ -12,13 +12,15 @@
 <body>
     <main id="app">
         <p>YOUR CHARACTER</p>
-        <p>{{c.appearence.gender}}</p>
-        <p>{{c.appearence.hair}}</p>
-        <p>{{c.appearence.beard}}</p>
-        <p>{{c.appearence.moustache}}</p>
-        <p>{{c.appearence.hat}}</p>
-        <p>{{c.appearence.glasses}}</p>
-        <p>{{c.appearence.scar}}</p>
+        <div class="character-container">
+            <img v-bind:src="'img/appearence/gender_' + c.appearence.gender.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/eyes_' + c.appearence.gender.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/scar_' + c.appearence.scar.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'" />
+        </div>
     </main>
 </body>
 
