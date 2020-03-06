@@ -42,19 +42,21 @@ class Appearence {
         return this.scar !== -1
     }
     random(): void {
-        this.gender=Utils.rnd(genders.length)
-        this.eyes=Utils.rnd(eyes.length)
-        this.hair=Utils.rnd(hairs.length)
-        if (this.gender===0) {
-            this.moustache=Utils.rnd(moustaches.length)
-            this.beard=Utils.rnd(beards.length)
+        this.gender = Utils.rnd(genders.length)
+        this.eyes = Utils.rnd(eyes.length)
+        this.hair = Utils.rnd(hairs.length)
+        if (this.gender === 0) {
+            this.moustache = Utils.rnd(moustaches.length)
+            this.beard = Utils.rnd(beards.length)
+            this.scar = Utils.chance() ? Utils.rnd(scars.length) : scars.length - 1
         }
         else {
-            this.moustache=moustaches.length-1
-            this.beard=beards.length-1
+            this.moustache = moustaches.length - 1
+            this.beard = beards.length - 1
+            this.scar = scars.length - 1
         }
-        this.hat=Utils.rnd(hats.length)
-        this.glasses=Utils.rnd(glasses.length)
-        this.scar=Utils.rnd(scars.length)
+        this.hat = Utils.rnd(hats.length)
+        this.glasses = Utils.rnd(glasses.length)
+
     }
 }

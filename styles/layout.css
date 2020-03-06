@@ -1,13 +1,92 @@
-.character-container {
-    position: absolute;
-    width: 256px;
-    height: 256px;
-    background-color: #e2e2e2;
+main.night {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: URL(../img/backgrounds/bg_night.png);
 }
-.character-container > img {
-    width: 256px;
-    height: 256px;
+main.day {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: URL(../img/backgrounds/bg_day.png);
+}
+
+main #portrait {
+    z-index: -10;
+    position: fixed;
+    top: 5px;
+    left: 5px;
+    width: 100px;
+    height: 100px;
+}
+main #portrait img {
     position: absolute;
-    display: inline-block;
+    width: 100px;
+    height: 100px;
     image-rendering: pixelated;
+}
+
+main #buttons {
+    z-index: -10;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+    width: auto;
+    height: 64px;
+}
+main #buttons a {
+    position: relative;
+    float: left;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    background-color: #2e2e2e;
+    color: #e2e2e2;
+    margin-right: 5px;
+    padding: 0;
+    line-height: 64px;
+    cursor: pointer !important;
+    border-radius: 5px;
+}
+main #buttons a:last-of-type {
+    margin-right: 0;
+}
+main #buttons a:active {
+    border-top: 5px solid #2e2e2e;
+}
+
+main #sea {
+    z-index: -100;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: URL(../img/backgrounds/bg_sea.png);
+    background-size: cover;
+    background-position: center center;
+}
+
+main #place.city {
+    z-index: -50;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-size: cover;
+    background-position: center center;
+}
+main #place.city.doruk {
+    background-image: URL(../img/backgrounds/bg_city_1.png);
+}
+main #place.city.ostaber {
+    background-image: URL(../img/backgrounds/bg_city_2.png);
+}
+main #place.city.gratia {
+    background-image: URL(../img/backgrounds/bg_city_3.png);
 }

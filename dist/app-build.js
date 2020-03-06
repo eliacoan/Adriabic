@@ -40,14 +40,15 @@ class Appearence {
         if (this.gender === 0) {
             this.moustache = Utils.rnd(moustaches.length);
             this.beard = Utils.rnd(beards.length);
+            this.scar = Utils.chance() ? Utils.rnd(scars.length) : scars.length - 1;
         }
         else {
             this.moustache = moustaches.length - 1;
             this.beard = beards.length - 1;
+            this.scar = scars.length - 1;
         }
         this.hat = Utils.rnd(hats.length);
         this.glasses = Utils.rnd(glasses.length);
-        this.scar = Utils.rnd(scars.length);
     }
 }
 class Character {
@@ -70,6 +71,10 @@ class City {
         this.name = name;
         this.size = size;
     }
+    // Methods
+    static lcName() {
+        return this.name.toLowerCase();
+    }
 }
 class Utils {
     static rnd(limit = 100) {
@@ -80,12 +85,12 @@ class Utils {
     }
 }
 let genders = ['Male', 'Female'];
-let eyes = ['Little', 'Tired', 'Vicious'];
+let eyes = ['Little', 'Tired', 'Vicious', 'Kid', 'Bad'];
 let hairs = ['Short', 'Long', 'Friar', 'Punk', 'High', 'No'];
 let moustaches = ['Big', 'Tiny', 'No'];
 let beards = ['Big', 'Sideburns', 'Tiny', 'No'];
 let hats = ['Baseball', 'Beanie', 'No'];
-let glasses = ['Sunglasses', 'Prescription', 'No'];
+let glasses = ['Sunglasses', 'Prescription', 'Prescription 2', 'No'];
 let scars = ['Eyebrow', 'Cheeck', 'No'];
 var CitySize;
 (function (CitySize) {

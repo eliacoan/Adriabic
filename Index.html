@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,35 +8,61 @@
     <title>Adriabic</title>
     <link rel="stylesheet" href="styles/style.css">
     <script type="text/javascript" src="scripts/lib/vue.js"></script>
-	<script type="text/javascript" src="dist/app-build.js"></script>
+    <script type="text/javascript" src="dist/app-build.js"></script>
 </head>
+
 <body>
-    <main id="app">
-        <p>YOUR CHARACTER</p>
-        <div class="character-container">
+    <main id="app" v-bind:class="time">
+
+        <div id="portrait">
             <img v-bind:src="'img/appearence/gender_' + c.appearence.gender.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/eyes_' + c.appearence.gender.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/eyes_' + c.appearence.eyes.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
             <img v-bind:src="'img/appearence/scar_' + c.appearence.scar.toString() + '.png'" />
             <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
             <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'" />
         </div>
+        <div id="buttons">
+            <a href="#" v-on:click="cycleDayTime">D/N</a>
+            <a href="#" v-on:click="cycleCities">C</a>
+        </div>
+        <div id="sea" class="sea">
+        </div>
+        <div id="place" v-bind:class="'city ' + city.name.toLowerCase()">
+        </div>
+
     </main>
+
 </body>
 
-<script>
+<script type="text/javascript">
 
-    var vm = new Vue( {
+    var vm = new Vue({
         el: "#app",
         data: {
-            c: charactersEngine.Create(1, 'PINO', 'SCOTTO')
+            dayTime: 'day',
+            c: charactersEngine.Create(1, 'Tony', 'Buzhiol'),
+            cityIndex: 2
         },
         computed: {
-
+            time: function () {
+                return this.dayTime
+            },
+            city: function () {
+                return cities[this.cityIndex]
+            }
         },
         methods: {
-            
+            cycleDayTime() {
+                this.dayTime = this.dayTime == 'day' ? 'night' : 'day'
+            },
+            cycleCities() {
+                this.cityIndex++;
+                if (this.cityIndex >= cities.length) {
+                    this.cityIndex = 0
+                }
+            }
         }
     });
 

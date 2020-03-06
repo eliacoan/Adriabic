@@ -10,4 +10,7 @@ class City {
         this.size = size
     }
     // Methods
+    static lcName(): string {
+        return this.name.toLowerCase()
+    }
 }
