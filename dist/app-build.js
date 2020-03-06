@@ -48,7 +48,7 @@ class Appearence {
             this.scar = scars.length - 1;
         }
         this.hat = Utils.rnd(hats.length);
-        this.glasses = Utils.rnd(glasses.length);
+        this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1;
     }
 }
 class Character {
