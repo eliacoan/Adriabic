@@ -20,15 +20,15 @@ main #portrait {
     position: fixed;
     top: 50%;
     left: 50%;
-    width: 480px;
-    height: 480px;
-    margin-left: -50%;
-    margin-top: -50%;
+    width: 300px;
+    height: 300px;
+    margin-left: -150px;
+    margin-top: -150px;
 }
 main #portrait img {
     position: absolute;
-    width: 480px;
-    height: 480px;
+    width: 100%;
+    height: 100%;
     image-rendering: pixelated;
 }
 
