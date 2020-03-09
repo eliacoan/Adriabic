@@ -19,13 +19,14 @@
             <img v-bind:src="'img/appearence/eyes_' + c.appearence.eyes.toString() + '.png'" />
             <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
             <img v-bind:src="'img/appearence/scar_' + c.appearence.scar.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
             <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'" />
             <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
         </div>
         <div id="buttons">
             <a href="#" v-on:click="cycleDayTime">D/N</a>
-            <a href="#" v-on:click="cycleCities">C</a>
+            <a href="#" v-on:click="cycleCities">P</a>
+            <a href="#" v-on:click="cycleCharacter">C</a>
         </div>
         <div id="sea" class="sea">
         </div>
@@ -43,7 +44,7 @@
         data: {
             dayTime: 'day',
             c: charactersEngine.Create(1, 'Tony', 'Buzhiol'),
-            cityIndex: 2
+            cityIndex: 0
         },
         computed: {
             time: function () {
@@ -62,6 +63,9 @@
                 if (this.cityIndex >= cities.length) {
                     this.cityIndex = 0
                 }
+            },
+            cycleCharacter() {
+                this.c = charactersEngine.Create(1, 'Tony', 'Buzhiol')
             }
         }
     });

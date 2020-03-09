@@ -18,15 +18,17 @@ main.day {
 main #portrait {
     z-index: -10;
     position: fixed;
-    top: 5px;
-    left: 5px;
-    width: 100px;
-    height: 100px;
+    top: 50%;
+    left: 50%;
+    width: 480px;
+    height: 480px;
+    margin-left: -50%;
+    margin-top: -50%;
 }
 main #portrait img {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 480px;
+    height: 480px;
     image-rendering: pixelated;
 }
 
@@ -89,4 +91,16 @@ main #place.city.ostaber {
 }
 main #place.city.gratia {
     background-image: URL(../img/backgrounds/bg_city_3.png);
+}
+main #place.city.kokrol {
+    background-image: URL(../img/backgrounds/bg_city_4.png);
+}
+main #place.city.publaziv {
+    background-image: URL(../img/backgrounds/bg_city_5.png);
+}
+main #place.city.lenfor {
+    background-image: URL(../img/backgrounds/bg_city_6.png);
+}
+main #place.city.fonais {
+    background-image: URL(../img/backgrounds/bg_city_7.png);
 }
