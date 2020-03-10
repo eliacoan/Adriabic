@@ -17,10 +17,13 @@
             <img v-bind:src="'img/appearence/body_' + c.appearence.body.toString() + '.png'" class="body" />
             <img v-bind:src="'img/appearence/gender_' + c.appearence.gender.toString() + '.png'" />
             <img v-bind:src="'img/appearence/eyes_' + c.appearence.eyes.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'"
+                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
             <img v-bind:src="'img/appearence/scar_' + c.appearence.scar.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'" />
+            <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'"
+                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
+            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'"
+                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
             <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
         </div>
         <div id="buttons">
@@ -40,11 +43,13 @@
                     <img
                         v-bind:src="'img/appearence/gender_' + city.marina.npc.appearence.gender.toString() + '.png'" />
                     <img v-bind:src="'img/appearence/eyes_' + city.marina.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.marina.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.marina.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.marina.npc.appearence.hueRotate + 'deg);'" />
                     <img v-bind:src="'img/appearence/scar_' + city.marina.npc.appearence.scar.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/beard_' + city.marina.npc.appearence.beard.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/hair_' + city.marina.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.marina.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.marina.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.marina.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.marina.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.marina.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.marina.type}}</p>
@@ -57,11 +62,13 @@
                     <img
                         v-bind:src="'img/appearence/gender_' + city.market.npc.appearence.gender.toString() + '.png'" />
                     <img v-bind:src="'img/appearence/eyes_' + city.market.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.market.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.market.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.market.npc.appearence.hueRotate + 'deg);'" />
                     <img v-bind:src="'img/appearence/scar_' + city.market.npc.appearence.scar.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/beard_' + city.market.npc.appearence.beard.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/hair_' + city.market.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.market.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.market.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.market.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.market.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.market.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.market.type}}</p>
@@ -74,11 +81,13 @@
                     <img
                         v-bind:src="'img/appearence/gender_' + city.brothel.npc.appearence.gender.toString() + '.png'" />
                     <img v-bind:src="'img/appearence/eyes_' + city.brothel.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.brothel.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.brothel.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.brothel.npc.appearence.hueRotate + 'deg);'" />
                     <img v-bind:src="'img/appearence/scar_' + city.brothel.npc.appearence.scar.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/beard_' + city.brothel.npc.appearence.beard.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/hair_' + city.brothel.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.brothel.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.brothel.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.brothel.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.brothel.npc.appearence.hueRotate + 'deg);'" />"
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.brothel.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.brothel.type}}</p>
@@ -91,11 +100,13 @@
                     <img
                         v-bind:src="'img/appearence/gender_' + city.police.npc.appearence.gender.toString() + '.png'" />
                     <img v-bind:src="'img/appearence/eyes_' + city.police.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.police.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.police.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.police.npc.appearence.hueRotate + 'deg);'" />
                     <img v-bind:src="'img/appearence/scar_' + city.police.npc.appearence.scar.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/beard_' + city.police.npc.appearence.beard.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/hair_' + city.police.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.police.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.police.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.police.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.police.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.police.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.police.type}}</p>
@@ -108,12 +119,13 @@
                     <img
                         v-bind:src="'img/appearence/gender_' + city.hospital.npc.appearence.gender.toString() + '.png'" />
                     <img v-bind:src="'img/appearence/eyes_' + city.hospital.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.hospital.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.hospital.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.hospital.npc.appearence.hueRotate + 'deg);'" />
                     <img v-bind:src="'img/appearence/scar_' + city.hospital.npc.appearence.scar.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/beard_' + city.hospital.npc.appearence.beard.toString() + '.png'" />
-                    <img v-bind:src="'img/appearence/hair_' + city.hospital.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.hospital.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.hospital.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.hospital.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.hospital.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.hospital.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.hospital.type}}</p>
@@ -128,14 +140,14 @@
                         v-bind:src="'img/appearence/gender_' + city.blackMarket.npc.appearence.gender.toString() + '.png'" />
                     <img
                         v-bind:src="'img/appearence/eyes_' + city.blackMarket.npc.appearence.eyes.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/moustache_' + city.blackMarket.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/moustache_' + city.blackMarket.npc.appearence.moustache.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.blackMarket.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/scar_' + city.blackMarket.npc.appearence.scar.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/beard_' + city.blackMarket.npc.appearence.beard.toString() + '.png'" />
-                    <img
-                        v-bind:src="'img/appearence/hair_' + city.blackMarket.npc.appearence.hair.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.blackMarket.npc.appearence.beard.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.blackMarket.npc.appearence.hueRotate + 'deg);'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.blackMarket.npc.appearence.hair.toString() + '.png'"
+                        v-bind:style="'filter: hue-rotate(' + city.blackMarket.npc.appearence.hueRotate + 'deg);'" />
                     <img
                         v-bind:src="'img/appearence/glasses_' + city.blackMarket.npc.appearence.glasses.toString() + '.png'" />
                     <p clasS="place-name">{{city.blackMarket.type}}</p>

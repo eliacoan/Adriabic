@@ -9,8 +9,9 @@ class Appearence {
     glasses: number
     scar: number
     body: number
+    hueRotate: number
     // Constructor
-    constructor(gender: number = -1, eyes: number = -1, hair: number = -1, moustache: number = -1, beard: number = -1, hat: number = -1, glasses: number = -1, scar: number = -1, body: number = -1) {
+    constructor(gender: number = -1, eyes: number = -1, hair: number = -1, moustache: number = -1, beard: number = -1, hat: number = -1, glasses: number = -1, scar: number = -1, body: number = -1, hueRotate = 0) {
         this.gender = gender
         this.eyes = eyes
         this.hair = hair
@@ -20,6 +21,7 @@ class Appearence {
         this.glasses = glasses
         this.scar = scar
         this.body = body
+        this.hueRotate = hueRotate
     }
     // Methods
     hasGender(): boolean {
@@ -63,6 +65,7 @@ class Appearence {
         this.hat = Utils.rnd(hats.length)
         this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1
         this.body = Utils.rnd(bodies.length)
+        this.hueRotate = Utils.rnd(360)
     }
     randomGender(gender: number): void {
         this.gender = gender
@@ -83,5 +86,6 @@ class Appearence {
         this.hat = Utils.rnd(hats.length)
         this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1
         this.body = Utils.rnd(bodies.length)
+        this.hueRotate = Utils.rnd(360)
     }
 }

@@ -1,7 +1,7 @@
 "use strict";
 class Appearence {
     // Constructor
-    constructor(gender = -1, eyes = -1, hair = -1, moustache = -1, beard = -1, hat = -1, glasses = -1, scar = -1, body = -1) {
+    constructor(gender = -1, eyes = -1, hair = -1, moustache = -1, beard = -1, hat = -1, glasses = -1, scar = -1, body = -1, hueRotate = 0) {
         this.gender = gender;
         this.eyes = eyes;
         this.hair = hair;
@@ -11,6 +11,7 @@ class Appearence {
         this.glasses = glasses;
         this.scar = scar;
         this.body = body;
+        this.hueRotate = hueRotate;
     }
     // Methods
     hasGender() {
@@ -54,17 +55,20 @@ class Appearence {
         this.hat = Utils.rnd(hats.length);
         this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1;
         this.body = Utils.rnd(bodies.length);
+        this.hueRotate = Utils.rnd(360);
     }
     randomGender(gender) {
         this.gender = gender;
         this.eyes = Utils.rnd(eyes.length);
         this.hair = Utils.rnd(hairs.length);
         if (this.gender === 0) {
+            this.hair = Utils.rnd(hairs.length);
             this.moustache = Utils.chance() ? Utils.rnd(moustaches.length) : moustaches.length - 1;
             this.beard = Utils.chance() ? Utils.rnd(beards.length) : beards.length - 1;
             this.scar = Utils.chance() ? Utils.rnd(scars.length) : scars.length - 1;
         }
         else {
+            this.hair = Utils.rnd(hairs.length - 2);
             this.moustache = moustaches.length - 1;
             this.beard = beards.length - 1;
             this.scar = scars.length - 1;
@@ -72,6 +76,7 @@ class Appearence {
         this.hat = Utils.rnd(hats.length);
         this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1;
         this.body = Utils.rnd(bodies.length);
+        this.hueRotate = Utils.rnd(360);
     }
 }
 class Character {
@@ -84,7 +89,6 @@ class Character {
     }
     // Methods
     fullname() {
-        Utils.log(this.id.toString());
         return this.lastName + ' ' + this.name;
     }
 }
