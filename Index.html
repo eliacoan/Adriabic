@@ -25,14 +25,124 @@
         </div>
         <div id="buttons">
             <a href="#" v-on:click="cycleDayTime">D/N</a>
-            <a href="#" v-on:click="cycleCities">P</a>
+            <!-- <a href="#" v-on:click="cycleCities">P</a> -->
             <a href="#" v-on:click="cycleCharacter">C</a>
         </div>
         <div id="sea" class="sea">
         </div>
-        <div id="place" v-bind:class="'city ' + city.name.toLowerCase()">
+        <div id="city" v-bind:class="'city ' + city.name.toLowerCase()">
+            <p v-on:click="cycleCities">{{city.name}}</p>
         </div>
-
+        <div id="places">
+            <div v-if="city.marina">
+                <div class="portrait">
+                    <img v-bind:src="'img/appearence/body_' + city.marina.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.marina.npc.appearence.gender.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/eyes_' + city.marina.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.marina.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/scar_' + city.marina.npc.appearence.scar.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.marina.npc.appearence.beard.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.marina.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.marina.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.marina.type}}</p>
+                    <p clasS="npc-name">{{city.marina.npc.fullname()}}</p>
+                </div>
+            </div>
+            <div v-if="city.market">
+                <div class="portrait">
+                    <img v-bind:src="'img/appearence/body_' + city.market.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.market.npc.appearence.gender.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/eyes_' + city.market.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.market.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/scar_' + city.market.npc.appearence.scar.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.market.npc.appearence.beard.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.market.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.market.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.market.type}}</p>
+                    <p clasS="npc-name">{{city.market.npc.fullname()}}</p>
+                </div>
+            </div>
+            <div v-if="city.brothel">
+                <div class="portrait">
+                    <img v-bind:src="'img/appearence/body_' + city.brothel.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.brothel.npc.appearence.gender.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/eyes_' + city.brothel.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.brothel.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/scar_' + city.brothel.npc.appearence.scar.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.brothel.npc.appearence.beard.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.brothel.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.brothel.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.brothel.type}}</p>
+                    <p clasS="npc-name">{{city.brothel.npc.fullname()}}</p>
+                </div>
+            </div>
+            <div v-if="city.police">
+                <div class="portrait">
+                    <img v-bind:src="'img/appearence/body_' + city.police.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.police.npc.appearence.gender.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/eyes_' + city.police.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.police.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/scar_' + city.police.npc.appearence.scar.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/beard_' + city.police.npc.appearence.beard.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.police.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.police.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.police.type}}</p>
+                    <p clasS="npc-name">{{city.police.npc.fullname()}}</p>
+                </div>
+            </div>
+            <div v-if="city.hospital">
+                <div class="portrait">
+                    <img v-bind:src="'img/appearence/body_' + city.hospital.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.hospital.npc.appearence.gender.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/eyes_' + city.hospital.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.hospital.npc.appearence.moustache.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/scar_' + city.hospital.npc.appearence.scar.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/beard_' + city.hospital.npc.appearence.beard.toString() + '.png'" />
+                    <img v-bind:src="'img/appearence/hair_' + city.hospital.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.hospital.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.hospital.type}}</p>
+                    <p clasS="npc-name">{{city.hospital.npc.fullname()}}</p>
+                </div>
+            </div>
+            <div v-if="city.blackMarket">
+                <div class="portrait">
+                    <img
+                        v-bind:src="'img/appearence/body_' + city.blackMarket.npc.appearence.body.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/gender_' + city.blackMarket.npc.appearence.gender.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/eyes_' + city.blackMarket.npc.appearence.eyes.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/moustache_' + city.blackMarket.npc.appearence.moustache.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/scar_' + city.blackMarket.npc.appearence.scar.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/beard_' + city.blackMarket.npc.appearence.beard.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/hair_' + city.blackMarket.npc.appearence.hair.toString() + '.png'" />
+                    <img
+                        v-bind:src="'img/appearence/glasses_' + city.blackMarket.npc.appearence.glasses.toString() + '.png'" />
+                    <p clasS="place-name">{{city.blackMarket.type}}</p>
+                    <p clasS="npc-name">{{city.blackMarket.npc.fullname()}}</p>
+                </div>
+            </div>
+        </div>
     </main>
 
 </body>
@@ -43,7 +153,7 @@
         el: "#app",
         data: {
             dayTime: 'day',
-            c: charactersEngine.Create(1, 'Tony', 'Buzhiol'),
+            c: charactersEngine.CreateRandom(1, 'Tony', 'Buzhiol'),
             cityIndex: 0
         },
         computed: {
@@ -65,8 +175,11 @@
                 }
             },
             cycleCharacter() {
-                this.c = charactersEngine.Create(1, 'Tony', 'Buzhiol')
+                this.c = charactersEngine.CreateRandom(1, 'Tony', 'Buzhiol')
             }
+        },
+        mounted: function () {
+            gameEngine.CreateGame()
         }
     });
 

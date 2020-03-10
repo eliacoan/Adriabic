@@ -31,7 +31,6 @@ main #portrait img {
     height: 100%;
     image-rendering: pixelated;
 }
-
 main #portrait img.body {
     position: fixed;
     left: 50%;
@@ -41,7 +40,6 @@ main #portrait img.body {
     height: 110%;
     image-rendering: pixelated;
 }
-
 
 main #buttons {
     z-index: -10;
@@ -84,7 +82,7 @@ main #sea {
     background-position: center center;
 }
 
-main #place.city {
+main #city.city {
     z-index: -50;
     position: absolute;
     top: 0;
@@ -94,24 +92,91 @@ main #place.city {
     background-size: cover;
     background-position: center center;
 }
-main #place.city.doruk {
+main #city p {
+    margin: 10px;
+    color: #fff;
+    font-size: 20px;
+    width: 150px;
+    height: 36px;
+    line-height: 32px;
+    text-transform: uppercase;
+    border: 2px #fff solid;
+    border-radius: 4px;
+    background-color: #1313A9;
+    text-align: center;
+}
+main #city.city.doruk {
     background-image: URL(../img/backgrounds/bg_city_1.png);
 }
-main #place.city.ostaber {
+main #city.city.ostaber {
     background-image: URL(../img/backgrounds/bg_city_2.png);
 }
-main #place.city.gratia {
+main #city.city.gratia {
     background-image: URL(../img/backgrounds/bg_city_3.png);
 }
-main #place.city.kokrol {
+main #city.city.kokrol {
     background-image: URL(../img/backgrounds/bg_city_4.png);
 }
-main #place.city.publaziv {
+main #city.city.publaziv {
     background-image: URL(../img/backgrounds/bg_city_5.png);
 }
-main #place.city.lenfor {
+main #city.city.lenfor {
     background-image: URL(../img/backgrounds/bg_city_6.png);
 }
-main #place.city.fonais {
+main #city.city.fonais {
     background-image: URL(../img/backgrounds/bg_city_7.png);
+}
+
+main #places {
+    z-index: -5;
+    position: fixed;
+    width: 400px;
+    height: 250px;
+    bottom: 10px;
+    margin-left: 50%;
+    left: -200px;
+    background-color: rgba(50,50,50,0.8);
+}
+main #places div {
+    width: 33%;
+    height: 50%;
+    float: left;
+}
+main #places div div.portrait {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+main #places div div.portrait > img {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+main #places div div.portrait > p.npc-name {
+    display: inline-block;
+    position: absolute;
+    bottom: -5px;
+    left: 5px;
+    right: 5px;
+    font-size: 15px;
+    color: #2e2e2e;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+}
+main #places div div.portrait > p.place-name {
+    display: inline-block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 10px;
+    left: -5px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #e2e2e2;
+    background: #1313A9;
+    text-align: center;
 }
