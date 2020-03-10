@@ -13,8 +13,8 @@
 
 <body>
     <main id="app" v-bind:class="time">
-
         <div id="portrait">
+            <img v-bind:src="'img/appearence/body_' + c.appearence.body.toString() + '.png'" class="body" />
             <img v-bind:src="'img/appearence/gender_' + c.appearence.gender.toString() + '.png'" />
             <img v-bind:src="'img/appearence/eyes_' + c.appearence.eyes.toString() + '.png'" />
             <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'" />
