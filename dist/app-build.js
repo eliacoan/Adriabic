@@ -74,7 +74,7 @@ class Appearence {
             this.scar = scars.length - 1;
         }
         this.hat = Utils.rnd(hats.length);
-        this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1;
+        this.glasses = Utils.chance(30) ? Utils.rnd(glasses.length) : glasses.length - 1;
         this.body = Utils.rnd(bodies.length);
         this.hueRotate = Utils.rnd(360);
     }
@@ -226,7 +226,7 @@ class gameEngine {
         // Create Fonais places
         cities[6].marina = new Place(160, PlaceType.Marina, charactersEngine.Create(1013, "Henry", "Reigns", 0));
         cities[6].brothel = new Place(161, PlaceType.Brothel, charactersEngine.Create(1014, "Sister", "Kelly", 1));
-        Utils.log('Cities generated');
+        Utils.log(cities.length + ' cities generated');
     }
     static SaveGame() {
         window.localStorage.setItem(STORAGE_CITIES, JSON.stringify(cities));

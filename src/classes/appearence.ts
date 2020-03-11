@@ -84,7 +84,7 @@ class Appearence {
             this.scar = scars.length - 1
         }
         this.hat = Utils.rnd(hats.length)
-        this.glasses = Utils.chance() ? Utils.rnd(glasses.length) : glasses.length - 1
+        this.glasses = Utils.chance(30) ? Utils.rnd(glasses.length) : glasses.length - 1
         this.body = Utils.rnd(bodies.length)
         this.hueRotate = Utils.rnd(360)
     }

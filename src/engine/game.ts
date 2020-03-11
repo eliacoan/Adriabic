@@ -25,7 +25,11 @@ class gameEngine {
 		cities[6].marina = new Place(160, PlaceType.Marina, charactersEngine.Create(1013, "Henry", "Reigns", 0))
 		cities[6].brothel = new Place(161, PlaceType.Brothel, charactersEngine.Create(1014, "Sister", "Kelly", 1))
 
-		Utils.log('Cities generated')
+		Utils.log(cities.length + ' cities generated')
+
+		Utils.log(Utils.rnd(2).toString())
+		Utils.log(Utils.rnd(25).toString())
+		Utils.log(Utils.rnd(80).toString())
 	}
 	static SaveGame() {
 		window.localStorage.setItem(STORAGE_CITIES, JSON.stringify(cities))
