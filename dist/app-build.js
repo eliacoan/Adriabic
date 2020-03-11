@@ -41,13 +41,14 @@ class Appearence {
     random() {
         this.gender = Utils.rnd(genders.length);
         this.eyes = Utils.rnd(eyes.length);
-        this.hair = Utils.rnd(hairs.length);
         if (this.gender === 0) {
+            this.hair = Utils.rnd(hairs.length);
             this.moustache = Utils.chance() ? Utils.rnd(moustaches.length) : moustaches.length - 1;
             this.beard = Utils.chance() ? Utils.rnd(beards.length) : beards.length - 1;
             this.scar = Utils.chance() ? Utils.rnd(scars.length) : scars.length - 1;
         }
         else {
+            this.hair = Utils.rnd(hairs.length - 1);
             this.moustache = moustaches.length - 1;
             this.beard = beards.length - 1;
             this.scar = scars.length - 1;

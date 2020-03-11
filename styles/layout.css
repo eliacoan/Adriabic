@@ -33,11 +33,12 @@ main #portrait img {
     top: 16px;
 }
 main #portrait img.body {
-    position: fixed;
+    position: absolute;
     left: 50%;
+    top: -100px;
+    height: 550px;
     width: 400px;
     margin-left: -200px;
-    top: -32px;
     bottom: 0;
     image-rendering: pixelated;
 }
@@ -94,6 +95,7 @@ main #city.city {
     background-position: center center;
 }
 main #city p {
+    z-index: 5 !important;
     margin: 10px;
     color: #fff;
     font-size: 20px;
