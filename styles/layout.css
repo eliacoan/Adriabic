@@ -36,8 +36,8 @@ main #portrait img.body {
     left: 50%;
     width: 400px;
     margin-left: -200px;
+    top: 32px;
     bottom: 0;
-    height: 110%;
     image-rendering: pixelated;
 }
 

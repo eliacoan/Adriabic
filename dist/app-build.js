@@ -68,7 +68,7 @@ class Appearence {
             this.scar = Utils.chance() ? Utils.rnd(scars.length) : scars.length - 1;
         }
         else {
-            this.hair = Utils.rnd(hairs.length - 2);
+            this.hair = Utils.rnd(hairs.length - 1);
             this.moustache = moustaches.length - 1;
             this.beard = beards.length - 1;
             this.scar = scars.length - 1;
@@ -153,7 +153,7 @@ let beards = ['Big', 'Sideburns', 'Tiny', 'No'];
 let hats = ['Baseball', 'Beanie', 'No'];
 let glasses = ['Sunglasses', 'Prescription', 'Prescription 2', 'Glamour', 'No'];
 let scars = ['Eyebrow', 'Cheeck', 'No'];
-let bodies = ['Blue', 'Yellow', 'Red', 'Jacket'];
+let bodies = ['Blue', 'Yellow', 'Red', 'Sporty', 'Jacket', 'Pimp'];
 var CitySize;
 (function (CitySize) {
     CitySize[CitySize["Small"] = 1] = "Small";

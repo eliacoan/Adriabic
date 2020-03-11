@@ -6,4 +6,4 @@ let beards = ['Big', 'Sideburns', 'Tiny', 'No'];
 let hats = ['Baseball', 'Beanie', 'No'];
 let glasses = ['Sunglasses', 'Prescription', 'Prescription 2', 'Glamour', 'No'];
 let scars = ['Eyebrow', 'Cheeck', 'No'];
-let bodies = ['Blue', 'Yellow', 'Red', 'Jacket']
+let bodies = ['Blue', 'Yellow', 'Red', 'Sporty', 'Jacket', 'Pimp']
