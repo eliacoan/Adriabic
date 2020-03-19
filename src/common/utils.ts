@@ -8,7 +8,7 @@ class Utils {
         return Math.floor(Math.random() * (max - min)) + min;
     }
     static chance(threshold: number = 50): boolean {
-        return this.rnd() > threshold
+        return this.rnd() < threshold
     }
     static log(text: string) {
         console.log('INF    ' + text)

@@ -13,19 +13,8 @@
 
 <body>
     <main id="app" v-bind:class="time">
-        <div id="portrait">
-            <img v-bind:src="'img/appearence/body_' + c.appearence.body.toString() + '.png'" class="body" />
-            <img v-bind:src="'img/appearence/gender_' + c.appearence.gender.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/eyes_' + c.appearence.eyes.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/moustache_' + c.appearence.moustache.toString() + '.png'"
-                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
-            <img v-bind:src="'img/appearence/scar_' + c.appearence.scar.toString() + '.png'" />
-            <img v-bind:src="'img/appearence/beard_' + c.appearence.beard.toString() + '.png'"
-                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
-            <img v-bind:src="'img/appearence/hair_' + c.appearence.hair.toString() + '.png'"
-                v-bind:style="'filter: hue-rotate(' + c.appearence.hueRotate + 'deg);'" />
-            <img v-bind:src="'img/appearence/glasses_' + c.appearence.glasses.toString() + '.png'" />
-        </div>
+        <char-portrait v-bind:c="c">
+        </char-portrait>
         <div id="buttons">
             <a href="#" v-on:click="cycleDayTime">D/N</a>
             <!-- <a href="#" v-on:click="cycleCities">P</a> -->
@@ -38,28 +27,28 @@
         </div>
         <div id="places">
             <div v-if="city.marina">
-                <char-portrait v-bind:c="city.marina.npc" v-bind:p="city.marina.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.marina.npc" v-bind:p="city.marina.type">
+                </char-portrait-info>
             </div>
             <div v-if="city.market">
-                <char-portrait v-bind:c="city.market.npc" v-bind:p="city.market.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.market.npc" v-bind:p="city.market.type">
+                </char-portrait-info>
             </div>
             <div v-if="city.brothel">
-                <char-portrait v-bind:c="city.brothel.npc" v-bind:p="city.brothel.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.brothel.npc" v-bind:p="city.brothel.type">
+                </char-portrait-info>
             </div>
             <div v-if="city.police">
-                <char-portrait v-bind:c="city.police.npc" v-bind:p="city.police.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.police.npc" v-bind:p="city.police.type">
+                </char-portrait-info>
             </div>
             <div v-if="city.hospital">
-                <char-portrait v-bind:c="city.hospital.npc" v-bind:p="city.hospital.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.hospital.npc" v-bind:p="city.hospital.type">
+                </char-portrait-info>
             </div>
             <div v-if="city.blackMarket">
-                <char-portrait v-bind:c="city.blackMarket.npc" v-bind:p="city.blackMarket.type">
-                </char-portrait>
+                <char-portrait-info v-bind:c="city.blackMarket.npc" v-bind:p="city.blackMarket.type">
+                </char-portrait-info>
             </div>
         </div>
     </main>
@@ -69,6 +58,20 @@
 <script type="text/javascript">
 
     Vue.component('char-portrait', {
+        props: ['c'],
+        template: `
+            <div class="portrait"><img :src="\'img/appearence/body_\' + c.appearence.body.toString() + \'.png\'" class="body" />
+            <img :src="\'img/appearence/gender_\' + c.appearence.gender.toString() + \'.png\'" />
+            <img :src="\'img/appearence/eyes_\' + c.appearence.eyes.toString()+\'.png\'" />
+            <img :src="\'img/appearence/moustache_\' + c.appearence.moustache.toString() + \'.png\'" :style="\'filter: hue-rotate(\' + c.appearence.hueRotate + \'deg);\'" />
+            <img :src="\'img/appearence/scar_\' + c.appearence.scar.toString() + \'.png\'" />
+            <img :src="\'img/appearence/beard_\' + c.appearence.beard.toString() + \'.png\'" :style="\'filter: hue-rotate(\' + c.appearence.hueRotate + \'deg);\'" />
+            <img :src="\'img/appearence/hair_\' + c.appearence.hair.toString() + \'.png\'" :style="\'filter: hue-rotate(\' + c.appearence.hueRotate + \'deg);\'" /> 
+            <img :src="\'img/appearence/glasses_\' + c.appearence.glasses.toString() + \'.png\'" />
+            </div>
+            `
+    })
+    Vue.component('char-portrait-info', {
         props: ['c', 'p'],
         template: `
             <div class="portrait"><img :src="\'img/appearence/body_\' + c.appearence.body.toString() + \'.png\'" class="body" />

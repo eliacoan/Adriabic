@@ -15,32 +15,20 @@ main.day {
     background-image: URL(../img/backgrounds/bg_day.png);
 }
 
-main #portrait {
+main .portrait {
     z-index: -10;
     position: fixed;
-    top: 50%;
-    left: 50%;
-    width: 300px;
-    height: 300px;
-    margin-left: -150px;
-    margin-top: -150px;
+    top: 100px;
+    left: 10px;
+    width: 200px;
+    height: 200px;
 }
-main #portrait img {
+main .portrait img {
     position: absolute;
     width: 100%;
     height: 100%;
     image-rendering: pixelated;
     top: 16px;
-}
-main #portrait img.body {
-    position: absolute;
-    left: 50%;
-    top: -100px;
-    height: 550px;
-    width: 400px;
-    margin-left: -200px;
-    bottom: 0;
-    image-rendering: pixelated;
 }
 
 main #buttons {
@@ -154,14 +142,6 @@ main #places div div.portrait > img {
     display: inline-block;
     position: absolute;
     top: -5px;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    image-rendering: pixelated;
-}
-main #places div div.portrait > img.body {
-    position: absolute;
-    top: 5px;
     left: 0;
     width: 100%;
     height: 100%;
