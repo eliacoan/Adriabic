@@ -134,7 +134,7 @@ class Utils {
         return Math.floor(Math.random() * (max - min)) + min;
     }
     static chance(threshold = 50) {
-        return this.rnd() > threshold;
+        return this.rnd() < threshold;
     }
     static log(text) {
         console.log('INF    ' + text);
@@ -152,9 +152,9 @@ let hairs = ['Short', 'Long', 'Normal', 'Mohawk', 'High', 'Curly', 'Chinese', 'Y
 let moustaches = ['Big', 'Tiny', 'Dalì', 'Forebrow', 'No'];
 let beards = ['Big', 'Sideburns', 'Tiny', 'No'];
 let hats = ['Baseball', 'Beanie', 'No'];
-let glasses = ['Sunglasses', 'Prescription', 'Prescription 2', 'Glamour', 'No'];
+let glasses = ['Sunglasses', 'Prescription', 'Prescription 2', 'Glamour', 'Sunglasses 2', 'Prescription 3', 'No'];
 let scars = ['Eyebrow', 'Cheeck', 'No'];
-let bodies = ['Blue', 'Yellow', 'Red', 'Sporty', 'Jacket', 'Pimp'];
+let bodies = ['Shirt blue', 'Shirt yellow', 'Shirt purple', 'Shirt green', 'Shirt gray', 'Shirt ochra', 'Jacket red', 'Jacket green', 'Jacket black', 'Jacket gray', 'Jacket orange', 'Jacket yellow'];
 var CitySize;
 (function (CitySize) {
     CitySize[CitySize["Small"] = 1] = "Small";
